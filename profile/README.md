@@ -33,10 +33,10 @@ Nuestro objetivo es construir un ecosistema completo que incluya:
 https://triskcraft.com
 
 💬 Discord  
-https://discord.com/invite/VJQRZehTG
+https://discord.gg/eM6zs3ftXU
 
 🎥 TikTok  
-https://www.tiktok.com/@triskcraftsmp
+https://www.tiktok.com/@triskraftsmp
 
 ---
 
