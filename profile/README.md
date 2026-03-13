@@ -57,3 +57,7 @@ Si quieres contribuir:
 - Prisma
 - Minecraft Plugins
 - Discord Bots
+
+![Minecraft](https://img.shields.io/badge/Minecraft-Server-green)
+![Python](https://img.shields.io/badge/Python-Plugins-blue)
+![TypeScript](https://img.shields.io/badge/Web-TypeScript-blue)
