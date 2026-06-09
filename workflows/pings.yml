@@ -1,0 +1,41 @@
+name: Discord ping on PR assign
+
+on:
+    pull_request:
+        types: [assigned]
+
+permissions:
+    issues: write
+    pull-requests: read
+
+jobs:
+    comment-discord-tag:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Comment Discord tag
+              uses: actions/github-script@v7
+              with:
+                  script: |
+                      const map = {
+                        "lord-pixc": "<@474382397366861856>",
+                        "eliyya": "<@534614025271771158>",
+                        "Busterbladers": "<@407208613283758082>",
+                        "TheVugx": "<@1091566091156861019>",
+                        "ViictorTrisk": "<@274554291988070410>",
+                      };
+
+                      const assignee = context.payload.assignee?.login;
+                      const discordTag = map[assignee];
+
+                      if (!discordTag) {
+                        console.log(`No Discord tag mapped for ${assignee}`);
+                        return;
+                      }
+
+                      await github.rest.issues.createComment({
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        issue_number: context.payload.pull_request.number,
+                        body: `${discordTag} te asignaron esta PR: ${context.payload.pull_request.html_url}`
+                      });
