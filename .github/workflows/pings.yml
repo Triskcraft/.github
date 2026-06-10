@@ -1,8 +1,7 @@
 name: Discord ping on PR assign
 
 on:
-    pull_request:
-        types: [assigned]
+  workflow_call:
 
 permissions:
     issues: write
